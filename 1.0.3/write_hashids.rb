@@ -14,7 +14,7 @@ end
 
 hashids = Hashids.new(hash_id_salt, 6, custom_alphabet)
 
-open('new.json', 'w') { |f|
+open('../output/new.json', 'w') { |f|
 	for i in 1..1_000_000 do 
 		hash = hashids.encode(i)
 		f.puts hash
